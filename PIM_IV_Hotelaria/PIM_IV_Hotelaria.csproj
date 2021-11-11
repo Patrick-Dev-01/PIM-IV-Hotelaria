@@ -68,12 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\index.css" />
+    <Content Include="css\reserva.css" />
     <Content Include="css\styles.css" />
+    <Content Include="css\ticket.css" />
     <Content Include="img\casais_filhos-icon.svg" />
     <Content Include="img\casal-icon.svg" />
     <Content Include="img\facebook.svg" />
     <Content Include="img\hotel.png" />
-    <Content Include="img\instagram.svg" />
+    <Content Include="img\instragram.svg" />
     <Content Include="img\logo-footer.svg" />
     <Content Include="img\logo-header.svg" />
     <Content Include="img\quartos\casais_filhos_1.jpg" />
@@ -86,6 +88,9 @@
     <Content Include="img\solteiro-icon.svg" />
     <Content Include="img\twitter.svg" />
     <Content Include="index.html" />
+    <Content Include="js\script.js" />
+    <Content Include="reserva.html" />
+    <Content Include="ticket.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

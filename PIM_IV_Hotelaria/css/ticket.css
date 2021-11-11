@@ -1,0 +1,91 @@
+﻿main {
+    margin-bottom: 100px;
+}
+
+main h1 {
+    text-align: center;
+    color: #fff;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+    main section h2 {
+        color: #000;
+        margin: 5px 0 30px 0;
+    }
+
+    main section h3 {
+        width: 400px;
+        text-align: center;
+        color: #848484;
+        margin: 10px 0 30px 0;
+    }
+
+.ticket {
+    width: 35vw;
+    border: 2px solid #000;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #000;
+    margin: 0 50px;
+}
+
+.reserva {
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px 50px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+}
+
+.avisos {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.avisos span{
+    margin: 15px 0 20px 0;
+}
+
+    .avisos span strong {
+        margin-bottom: 5px;
+    }
+
+button {
+    width: 150px;
+    height: 50px;
+    background: #9157EE; 
+    border: none;
+    margin-top: 80px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+}
+
+    button:hover {
+        background: #6A43A9;
+        transition: 0.2s;
+    }
