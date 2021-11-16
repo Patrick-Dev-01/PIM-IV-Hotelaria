@@ -10,13 +10,13 @@
     <link rel="stylesheet" type="text/css" href="./css/reserva.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <title>Hotelaria Imperador - Reserva</title>
-    <script src="./js/script.js"></script>
+    <script src="./js/reserva.js"></script>
+    <script src="./js/mascaras.js"></script>
 </head>
 <body>
      <div class="container">
         <header>
-            <img src="./img/logo-header.svg" alt="Hotelaria Imperador" />
-            <h2>Hotelaria Imperador</h2>
+            <a href="index.aspx"><img src="./img/logo.svg" alt="Hotelaria Imperador" /></a>
         </header>
 
         <main>
@@ -29,7 +29,7 @@
                     <label>
                         CPF
                         <span>
-                            <input type="number" name="cpf" id="cpf" placeholder="000.000.000-00" />
+                            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" oninput="mascara(`cpf`, `${event.target.value}`);" onblur="Validar('cpf');" value=""/>
                             <p id="msg-erro-cpf"></p>
                         </span>
                     </label>
@@ -37,7 +37,7 @@
                     <label>
                         Nome
                         <span>
-                            <input type="text" name="nome" id="nome" />
+                            <input type="text" name="nome" id="nome" onblur="Validar('nome');" value=""/>
                             <p id="msg-erro-nome"></p>
                         </span>
                     </label>
@@ -45,7 +45,7 @@
                     <label>
                         Sobrenome
                         <span>
-                            <input type="text" name="sobrenome" id="sobrenome" />
+                            <input type="text" name="sobrenome" id="sobrenome" onblur="Validar('sobrenome');" value=""/>
                             <p id="msg-erro-sobrenome"></p>
                         </span>
                     </label>
@@ -53,8 +53,16 @@
                     <label>
                         E-mail
                         <span>
-                            <input type="email" name="email" id="email" />
+                            <input type="email" name="email" id="email" onblur="Validar('email');" value=""/>
                             <p id="msg-erro-email"></p>
+                        </span>
+                    </label>
+
+                    <label>
+                        Celular
+                        <span>
+                            <input type="text" name="celular" id="celular" placeholder="(00) 00000-0000" oninput="mascara(`celular`, `${event.target.value}`);" onblur="Validar('celular');" value="" />
+                            <p id="msg-erro-celular"></p>
                         </span>
                     </label>
 
@@ -62,11 +70,11 @@
                         <option value="">Quarto</option>
                         <option value="solteiro">Solteiro</option>
                         <option value="casal">Casal</option>
-                        <option value="casal com filhos">Casal com filhos</option>
+                        <option value="casal_filhos">Casal com filhos</option>
                     </select>
 
-                    <select name="descricao" id="descricao  ">
-                        <option>Descrição</option>
+                    <select name="descricao" id="descricao">
+                        <option value="">Descrição</option>
                     </select>
 
                     <div class="checks">
@@ -83,9 +91,16 @@
 
                     <label>Diária
                         <span>
-                            <input type="number" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/>
+                            <input type="number" name="diaria" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/>
                         </span>
                     </label>
+
+                     <select name="pagamento" id="pagamento">
+                        <option value="">Pagamento</option>
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="cartao">Cartão</option>
+                        <option value="pix">PIX</option>
+                    </select>
 
                     <a href="#"><button type="button" onclick="Enviar();">Concluir Reserva</button></a>
                 </form>

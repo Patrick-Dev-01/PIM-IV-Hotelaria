@@ -14,8 +14,7 @@
 <body>
      <div class="container">
         <header>
-            <img src="./img/logo-header.svg" alt="Hotelaria Imperador" />
-            <h2>Hotelaria Imperador</h2>
+             <a href="index.aspx"><img src="./img/logo.svg" alt="Hotelaria Imperador" /></a>
         </header>
 
         <main>

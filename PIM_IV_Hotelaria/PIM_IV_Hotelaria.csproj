@@ -80,6 +80,7 @@
     <Content Include="img\instragram.svg" />
     <Content Include="img\logo-footer.svg" />
     <Content Include="img\logo-header.svg" />
+    <Content Include="img\logo.svg" />
     <Content Include="img\quartos\casais_filhos_1.jpg" />
     <Content Include="img\quartos\casais_filhos_2.jpg" />
     <Content Include="img\quartos\casal_1.jpg" />
@@ -90,7 +91,8 @@
     <Content Include="img\solteiro-icon.svg" />
     <Content Include="img\twitter.svg" />
     <Content Include="index.aspx" />
-    <Content Include="js\script.js" />
+    <Content Include="js\mascaras.js" />
+    <Content Include="js\reserva.js" />
     <Content Include="reserva.aspx" />
     <Content Include="ticket.aspx" />
     <Content Include="Web.config" />

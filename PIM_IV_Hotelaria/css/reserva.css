@@ -10,6 +10,7 @@ form {
     align-items: center;
     margin-top: 80px;
 }
+
     input[type=number] {
         -moz-appearance: textfield; /* Firefox */
     }
@@ -19,13 +20,13 @@ form {
         flex-direction: column;
         font-size: 18px;
         font-weight: normal;
-        margin-bottom: 5px;
+        margin: 15px 0;
     }
 
     form span {
         display: flex;
-        align-items: center;
-        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     form span input {
@@ -33,13 +34,12 @@ form {
         height: 40px;
         text-indent: 5px;
         outline: none;
-        margin: 5px 0 20px 0;
+        margin-top: 5px;
     }
 
     form span p {
-        margin-left: 10px;
-        position: absolute;
-        right: -150px;
+        color: red;
+        margin-top: 5px;
     }
 
     form select {
