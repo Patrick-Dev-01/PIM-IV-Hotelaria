@@ -1,16 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="reserva.aspx.cs" Inherits="PIM_IV_Hotelaria.Reserva" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./css/reserva.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <title>Hotelaria Imperador - Reserva</title>
     <script src="./js/script.js"></script>
 </head>
 <body>
-    <div class="container">
+     <div class="container">
         <header>
             <img src="./img/logo-header.svg" alt="Hotelaria Imperador" />
             <h2>Hotelaria Imperador</h2>
@@ -22,7 +25,7 @@
             </div>
 
             <section>
-                <form method="POST">
+                <form method="post" id="form1" runat="server">
                     <label>
                         CPF
                         <span>
@@ -50,8 +53,8 @@
                     <label>
                         E-mail
                         <span>
-                            <input type="email" name="email" id="sobrenome" />
-                            <p id="msg-erro-sobrenome"></p>
+                            <input type="email" name="email" id="email" />
+                            <p id="msg-erro-email"></p>
                         </span>
                     </label>
 
@@ -80,11 +83,11 @@
 
                     <label>Diária
                         <span>
-                            <input type="number" placeholder="R$ 0,00" disabled style="cursor: not-allowed"/>
+                            <input type="number" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/>
                         </span>
                     </label>
 
-                    <a href=""><button type="button" onclick="Enviar();">Concluir Reserva</button></a>
+                    <a href="#"><button type="button" onclick="Enviar();">Concluir Reserva</button></a>
                 </form>
             </section>
         </main>

@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cancelamento.aspx" />
+    <Content Include="css\cancelamento.css" />
     <Content Include="css\index.css" />
     <Content Include="css\reserva.css" />
     <Content Include="css\styles.css" />
@@ -87,14 +89,42 @@
     <Content Include="img\quartos\solteiro_3.jpg" />
     <Content Include="img\solteiro-icon.svg" />
     <Content Include="img\twitter.svg" />
-    <Content Include="index.html" />
+    <Content Include="index.aspx" />
     <Content Include="js\script.js" />
-    <Content Include="reserva.html" />
-    <Content Include="ticket.html" />
+    <Content Include="reserva.aspx" />
+    <Content Include="ticket.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cancelamento.aspx.cs">
+      <DependentUpon>cancelamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cancelamento.aspx.designer.cs">
+      <DependentUpon>cancelamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reserva.aspx.cs">
+      <DependentUpon>reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reserva.aspx.designer.cs">
+      <DependentUpon>reserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ticket.aspx.cs">
+      <DependentUpon>ticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ticket.aspx.designer.cs">
+      <DependentUpon>ticket.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

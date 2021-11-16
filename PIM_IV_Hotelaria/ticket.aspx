@@ -1,15 +1,18 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ticket.aspx.cs" Inherits="PIM_IV_Hotelaria.ticket" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./css/ticket.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <title>Hotelaria Imperador - Ticket</title>
 </head>
 <body>
-    <div class="container">
+     <div class="container">
         <header>
             <img src="./img/logo-header.svg" alt="Hotelaria Imperador" />
             <h2>Hotelaria Imperador</h2>
@@ -96,7 +99,7 @@
                     </span>
                 </div>
 
-                <a href="index.html"><button type="button">Finalizar</button></a>
+                <a href="index.aspx"><button type="button">Finalizar</button></a>
             </section>
         </main>
 
@@ -134,7 +137,7 @@
             </section>
 
             <div class="direitos">
-                <h4>Hotelaria Imperador 2021 - Alguns Diretos Reservados</h4>
+                <h4>Hotelaria Imperador 2021 - Alguns Direitos Reservados</h4>
             </div>
         </footer>
     </div>
