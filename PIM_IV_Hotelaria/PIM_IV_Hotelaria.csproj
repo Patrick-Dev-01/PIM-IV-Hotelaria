@@ -93,6 +93,7 @@
     <Content Include="index.aspx" />
     <Content Include="js\mascaras.js" />
     <Content Include="js\reserva.js" />
+    <Content Include="js\ticket.js" />
     <Content Include="reserva.aspx" />
     <Content Include="ticket.aspx" />
     <Content Include="Web.config" />

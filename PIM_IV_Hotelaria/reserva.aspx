@@ -53,7 +53,7 @@
                     <label>
                         E-mail
                         <span>
-                            <input type="email" name="email" id="email" onblur="Validar('email');" value=""/>
+                            <input type="text" id="email" onblur="Validar('email');" value=""/>
                             <p id="msg-erro-email"></p>
                         </span>
                     </label>
@@ -66,16 +66,36 @@
                         </span>
                     </label>
 
-                    <select name="quarto" onchange="adicionarOpcoes(event.target.value);">
-                        <option value="">Quarto</option>
-                        <option value="solteiro">Solteiro</option>
-                        <option value="casal">Casal</option>
-                        <option value="casal_filhos">Casal com filhos</option>
-                    </select>
+                    <div class="quartos">
+                        <select name="quarto" onchange="adicionarOpcoes(event.target.value);">
+                            <option value="">Quarto</option>
+                            <option value="solteiro">Solteiro</option>
+                            <option value="casal">Casal</option>
+                            <option value="casal_filhos">Casal com filhos</option>
+                        </select>
+                        <p id="msg-erro-quarto"></p>
+                    </div>
+  
+                    <div class="descricao">
+                        <select name="descricao" id="descricao">
+                            <option value="">Descrição</option>
+                        </select>
+                    </div>
 
-                    <select name="descricao" id="descricao">
-                        <option value="">Descrição</option>
-                    </select>
+                     <div class="pagamento">
+                        <select name="pagamento" id="pagamento" onchange="Validar('pagamento', `${event.target.value}`);">
+                            <option value="">Pagamento</option>
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="cartao">Cartão</option>
+                            <option value="pix">PIX</option>
+                        </select>
+
+                        <span>
+                            <input type="number" name="diaria" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/>
+                        </span><br />
+
+                        <p id="msg-erro-pagamento"></p>
+                    </div>
 
                     <div class="checks">
                         <label>
@@ -87,20 +107,7 @@
                             <strong>Check Out</strong>
                             <input type="date" name="checkOut" /><br>
                         </label>
-                    </div>
-
-                    <label>Diária
-                        <span>
-                            <input type="number" name="diaria" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/>
-                        </span>
-                    </label>
-
-                     <select name="pagamento" id="pagamento">
-                        <option value="">Pagamento</option>
-                        <option value="dinheiro">Dinheiro</option>
-                        <option value="cartao">Cartão</option>
-                        <option value="pix">PIX</option>
-                    </select>
+                    </div>                   
 
                     <a href="#"><button type="button" onclick="Enviar();">Concluir Reserva</button></a>
                 </form>

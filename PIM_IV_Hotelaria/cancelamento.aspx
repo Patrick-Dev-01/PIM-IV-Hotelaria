@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/cancelamento.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <title>Hotelaria Imperador - Cancelamento</title>
+    <script src="./js/mascaras.js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,7 +30,7 @@
                     <label>
                         CPF
                         <span>
-                            <input type="number" name="cpf" id="cpf" placeholder="000.000.000-00" />
+                            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" value="" oninput="mascara(`cpf`, `${event.target.value}`);"/>
                             <p id="msg-erro-cpf"></p>
                         </span>
                     </label>

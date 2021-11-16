@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./css/ticket.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="./js/ticket.js"></script>
     <title>Hotelaria Imperador - Ticket</title>
 </head>
 <body>
@@ -22,11 +24,11 @@
                 <h1>Ticket da Reserva</h1>
             </div>
 
-            <section>
+            <section >
                 <h2>Agradecemos a sua reserva em nosso hotel</h2>
                 <h3>Aqui está seu ticket da reserva, contendo todos os seus dados e descrição do seu quarto</h3>
 
-                <div class="ticket">
+                <div class="ticket" id="ticket">
                     <div class="logo">
                         <img src="./img/logo-header.svg" alt="Hotel Imperador" />
                         <h1>Dados da Reserva</h1>
@@ -61,7 +63,7 @@
 
                         <span>
                             <strong>Andar</strong>
-                            <p>2</p>
+                            <p>2°</p>
                         </span>
 
                         <span>
@@ -78,7 +80,6 @@
                             <strong>Check Out</strong>
                             <p>00/00/0000</p>
                         </span>
-
                     </div>
                 </div>
 
@@ -98,7 +99,7 @@
                     </span>
                 </div>
 
-                <a href="index.aspx"><button type="button">Finalizar</button></a>
+                <a href="#"><button type="button" id="download" onclick="gerarPDF();">Finalizar</button></a>
             </section>
         </main>
 

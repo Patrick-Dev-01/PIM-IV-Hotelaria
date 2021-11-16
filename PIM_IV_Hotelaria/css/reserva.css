@@ -45,7 +45,6 @@ form {
     form select {
         width: 300px;
         height: 40px;
-        margin: 5px 0 20px 0;
     }
 
     form button {
@@ -78,10 +77,31 @@ form {
         font-size: 16px;
         font-weight: bold;
         margin: 0 0 5px 5px;
+        text-align: center;
     }
 
     .checks input {
         width: 145px;
         height: 40px;
         margin: 0 5px;
+    }
+
+.quartos, .descricao select {
+    margin: 15px 0;
+}
+
+    .quartos p {
+        color: red;
+        margin-top: 5px;
+    }
+
+.pagamento {
+    display: flex;
+    align-items: center;
+}
+
+    .pagamento input, .pagamento select {
+        width: 145px;
+        height: 40px;
+        margin: 15px 5px;
     }
