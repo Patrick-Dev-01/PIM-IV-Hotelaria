@@ -16,12 +16,18 @@
 <body>
      <div class="container">
         <header>
-             <a href="index.aspx"><img src="./img/logo.svg" alt="Hotelaria Imperador" /></a>
+            <a href="index.aspx"><img src="./img/logo.svg" alt="Hotelaria Imperador" /></a>
+            <ul>
+                <li><a href="index.aspx">Página Inicial</a></li>
+                <li><a href="#">Minha Reserva</a></li>
+                <li><a href="cancelamento.aspx">Cancelamento</a></li>
+            </ul>
         </header>
 
         <main>
             <div class="titulo">
                 <h1>Ticket da Reserva</h1>
+                <p id="cookie" runat="server"></p>
             </div>
 
             <section >

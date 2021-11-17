@@ -97,13 +97,25 @@ form {
         margin-top: 5px;
     }
 
-.pagamento {
+.tipo-pagamento {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
+    .pagamento{
+        display: flex;
+    }
 
     .pagamento input, .pagamento select {
         width: 145px;
         height: 40px;
         margin: 15px 5px;
     }
+
+.msg_erro_checkIn, .msg_erro_checkOut {
+    color: red;
+    width: 150px;
+    font-size: 16px;
+    margin-top: 5px;
+    text-align: center;
+}

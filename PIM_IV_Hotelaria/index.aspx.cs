@@ -11,7 +11,7 @@ namespace PIM_IV_Hotelaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["concluiuReserva"] = "false";
         }
     }
 }

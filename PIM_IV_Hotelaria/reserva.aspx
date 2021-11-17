@@ -17,6 +17,11 @@
      <div class="container">
         <header>
             <a href="index.aspx"><img src="./img/logo.svg" alt="Hotelaria Imperador" /></a>
+            <ul>
+                <li><a href="index.aspx">Página Inicial</a></li>
+                <li><a href="#">Minha Reserva</a></li>
+                <li><a href="cancelamento.aspx">Cancelamento</a></li>
+            </ul>
         </header>
 
         <main>
@@ -29,7 +34,7 @@
                     <label>
                         CPF
                         <span>
-                            <input type="text" runat="server" id="cpf" placeholder="000.000.000-00" oninput="mascara(`cpf`, `${event.target.value}`);" value=""/>
+                            <input type="text" runat="server" id="name_cpf" placeholder="000.000.000-00" oninput="mascara(`cpf`, `${event.target.value}`);" value=""/>
                             <p runat="server" id="msg_erro_cpf"></p>
                         </span>
                     </label>
@@ -37,23 +42,15 @@
                     <label>
                         Nome
                         <span>
-                            <input type="text" runat="server" name="nome" id="nome" value=""/>
+                            <input type="text" runat="server" name="nome" id="name_nome" value=""/>
                             <p runat="server" id="msg_erro_nome"></p>
-                        </span>
-                    </label>
-
-                    <label>
-                        Sobrenome
-                        <span>
-                            <input type="text" runat="server" name="sobrenome" id="sobrenome" value=""/>
-                            <p runat="server" id="msg_erro_sobrenome"></p>
                         </span>
                     </label>
 
                     <label>
                         E-mail
                         <span>
-                            <input type="text" runat="server" id="email" value=""/>
+                            <input type="text" runat="server" id="name_email" value=""/>
                             <p runat="server" id="msg_erro_email"></p>
                         </span>
                     </label>
@@ -61,13 +58,13 @@
                     <label>
                         Celular
                         <span>
-                            <input type="text" runat="server" name="celular" id="celular" placeholder="(00) 00000-0000" oninput="mascara(`celular`, `${event.target.value}`);" value="" />
+                            <input type="text" runat="server" name="celular" id="name_celular" placeholder="(00) 00000-0000" oninput="mascara(`celular`, `${event.target.value}`);" value="" />
                             <p runat="server" id="msg_erro_celular"></p>
                         </span>
                     </label>
 
                     <div class="quartos">
-                        <select runat="server" id="quarto" name="quarto" onchange="adicionarOpcoes(`${event.target.value}`);">
+                        <select runat="server" id="name_quarto" name="quarto" onchange="adicionarOpcoes(`${event.target.value}`);">
                             <option value="">Quarto</option>
                             <option value="solteiro">Solteiro</option>
                             <option value="casal">Casal</option>
@@ -77,34 +74,38 @@
                     </div>
   
                     <div class="descricao">
-                        <select name="descricao" id="descricao">
+                        <select name="descricao" id="name_descricao" runat="server">
                             <option value="">Descrição</option>
                         </select>
                     </div>
 
-                     <div class="pagamento">
-                        <select name="pagamento" id="pagamento" runat="server" onchange="Validar('pagamento', `${event.target.value}`);">
-                            <option value="">Pagamento</option>
-                            <option value="dinheiro">Dinheiro</option>
-                            <option value="cartao">Cartão</option>
-                            <option value="pix">PIX</option>
-                        </select>
+                     <div class="tipo-pagamento">
+                         <div class="pagamento">
+                             <select name="pagamento" id="name_pagamento" runat="server" onchange="Validar('pagamento', `${event.target.value}`);">
+                                <option value="">Pagamento</option>
+                                <option value="dinheiro">Dinheiro</option>
+                                <option value="cartao">Cartão</option>
+                                <option value="pix">PIX</option>
+                            </select>
 
-                        <span>
-                            <input type="number" name="diaria" runat="server" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/>
-                             <p runat="server" id="msg_erro_pagamento"></p>
-                        </span>
+                            <span>
+                                <input type="number" name="diaria" runat="server" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/> 
+                            </span>
+                         </div>
+                        <p runat="server" id="msg_erro_pagamento" style="color: red"></p>                        
                     </div>
 
                     <div class="checks">
                         <label>
                             <strong>Check In</strong>
-                            <input type="date" name="checkIn" runat="server"/>
+                            <input type="date" id="name_checkIn" name="checkIn" runat="server"/>
+                            <p runat="server" id="msg_erro_checkIn" class="msg_erro_checkIn"></p>            
                         </label>
 
                         <label>
                             <strong>Check Out</strong>
-                            <input type="date" name="checkOut" runat="server"/><br>
+                            <input type="date" id="name_checkOut" name="checkOut" runat="server"/>
+                            <p runat="server" id="msg_erro_checkOut" class="msg_erro_checkOut"></p>            
                         </label>
                     </div> 
                     

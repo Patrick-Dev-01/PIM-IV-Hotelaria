@@ -11,7 +11,15 @@ namespace PIM_IV_Hotelaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["concluiuReserva"] != "true")
+            {
+                Response.Redirect("index.aspx");
+            }
 
+            else
+            {
+                cookie.InnerText = "Welcome to ASP.NET";
+            }
         }
     }
 }
