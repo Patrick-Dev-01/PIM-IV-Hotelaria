@@ -47,21 +47,23 @@ form {
         height: 40px;
     }
 
-    form button {
-        width: 150px;
-        height: 50px;
-        color: #fff;
-        background: #9152F9;
-        border: none;
-        border-radius: 4px;
-        margin-top: 50px;
-        transition: 0.2s;
-    }
 
-    form button:hover {
-        background: #6A43A9;
-        transition: 0.2s;
-    }
+.btn-enviar{
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    background: #9152F9;
+    border: none;
+    border-radius: 4px;
+    margin-top: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background: #6A43A9;
+    transition: 0.2s;
+}
 
 .checks {
     width: 100%;

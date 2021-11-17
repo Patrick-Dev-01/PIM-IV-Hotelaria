@@ -29,51 +29,51 @@
                     <label>
                         CPF
                         <span>
-                            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" oninput="mascara(`cpf`, `${event.target.value}`);" onblur="Validar('cpf');" value=""/>
-                            <p id="msg-erro-cpf"></p>
+                            <input type="text" runat="server" id="cpf" placeholder="000.000.000-00" oninput="mascara(`cpf`, `${event.target.value}`);" value=""/>
+                            <p runat="server" id="msg_erro_cpf"></p>
                         </span>
                     </label>
 
                     <label>
                         Nome
                         <span>
-                            <input type="text" name="nome" id="nome" onblur="Validar('nome');" value=""/>
-                            <p id="msg-erro-nome"></p>
+                            <input type="text" runat="server" name="nome" id="nome" value=""/>
+                            <p runat="server" id="msg_erro_nome"></p>
                         </span>
                     </label>
 
                     <label>
                         Sobrenome
                         <span>
-                            <input type="text" name="sobrenome" id="sobrenome" onblur="Validar('sobrenome');" value=""/>
-                            <p id="msg-erro-sobrenome"></p>
+                            <input type="text" runat="server" name="sobrenome" id="sobrenome" value=""/>
+                            <p runat="server" id="msg_erro_sobrenome"></p>
                         </span>
                     </label>
 
                     <label>
                         E-mail
                         <span>
-                            <input type="text" id="email" onblur="Validar('email');" value=""/>
-                            <p id="msg-erro-email"></p>
+                            <input type="text" runat="server" id="email" value=""/>
+                            <p runat="server" id="msg_erro_email"></p>
                         </span>
                     </label>
 
                     <label>
                         Celular
                         <span>
-                            <input type="text" name="celular" id="celular" placeholder="(00) 00000-0000" oninput="mascara(`celular`, `${event.target.value}`);" onblur="Validar('celular');" value="" />
-                            <p id="msg-erro-celular"></p>
+                            <input type="text" runat="server" name="celular" id="celular" placeholder="(00) 00000-0000" oninput="mascara(`celular`, `${event.target.value}`);" value="" />
+                            <p runat="server" id="msg_erro_celular"></p>
                         </span>
                     </label>
 
                     <div class="quartos">
-                        <select name="quarto" onchange="adicionarOpcoes(event.target.value);">
+                        <select runat="server" id="quarto" name="quarto" onchange="adicionarOpcoes(`${event.target.value}`);">
                             <option value="">Quarto</option>
                             <option value="solteiro">Solteiro</option>
                             <option value="casal">Casal</option>
                             <option value="casal_filhos">Casal com filhos</option>
                         </select>
-                        <p id="msg-erro-quarto"></p>
+                        <p id="msg_erro_quarto" runat="server"></p>
                     </div>
   
                     <div class="descricao">
@@ -83,7 +83,7 @@
                     </div>
 
                      <div class="pagamento">
-                        <select name="pagamento" id="pagamento" onchange="Validar('pagamento', `${event.target.value}`);">
+                        <select name="pagamento" id="pagamento" runat="server" onchange="Validar('pagamento', `${event.target.value}`);">
                             <option value="">Pagamento</option>
                             <option value="dinheiro">Dinheiro</option>
                             <option value="cartao">Cartão</option>
@@ -91,25 +91,24 @@
                         </select>
 
                         <span>
-                            <input type="number" name="diaria" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/>
-                        </span><br />
-
-                        <p id="msg-erro-pagamento"></p>
+                            <input type="number" name="diaria" runat="server" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/>
+                             <p runat="server" id="msg_erro_pagamento"></p>
+                        </span>
                     </div>
 
                     <div class="checks">
                         <label>
                             <strong>Check In</strong>
-                            <input type="date" name="checkIn" />
+                            <input type="date" name="checkIn" runat="server"/>
                         </label>
 
                         <label>
                             <strong>Check Out</strong>
-                            <input type="date" name="checkOut" /><br>
+                            <input type="date" name="checkOut" runat="server"/><br>
                         </label>
-                    </div>                   
-
-                    <a href="#"><button type="button" onclick="Enviar();">Concluir Reserva</button></a>
+                    </div> 
+                    
+                    <asp:Button class="btn-enviar" type="button" runat="server" onclick="Button_Enviar" Text="Concluir Reserva"></asp:Button>
                 </form>
             </section>
         </main>

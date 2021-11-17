@@ -106,6 +106,8 @@
     <Compile Include="cancelamento.aspx.designer.cs">
       <DependentUpon>cancelamento.aspx</DependentUpon>
     </Compile>
+    <Compile Include="classes\Conexao.cs" />
+    <Compile Include="classes\Reserva.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +130,7 @@
     <Compile Include="ticket.aspx.designer.cs">
       <DependentUpon>ticket.aspx</DependentUpon>
     </Compile>
+    <Compile Include="utils\Mascaras.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
