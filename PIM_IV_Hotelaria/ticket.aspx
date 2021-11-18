@@ -27,7 +27,6 @@
         <main>
             <div class="titulo">
                 <h1>Ticket da Reserva</h1>
-                <p id="cookie" runat="server"></p>
             </div>
 
             <section >
@@ -44,47 +43,42 @@
                     <div class="reserva">
                         <span>
                             <strong>Cliente</strong>
-                            <p>Patrick Rodrigues</p>
+                            <p id="nome" runat="server"></p>
                         </span>
 
                         <span>
                             <strong>Telefone</strong>
-                            <p>(11) 0000-0000</p>
+                            <p id="celular" runat="server"></p>
                         </span>
 
                         <span>
                             <strong>E-mail</strong>
-                            <p>patrick@teste.com</p>
+                            <p id="email" runat="server"></p>
                         </span>
 
                         <span>
                             <strong>Quarto</strong>
-                            <p>Solteiro</p>
+                            <p id="quarto" runat="server"></p>
                         </span>
 
                         <span>
-                            <strong>Descrição do Quarto</strong>
-                            <p>1 Cama de casal e 3 camas de solteiro</p>
-                        </span><br />
-
-                        <span>
                             <strong>Andar</strong>
-                            <p>2°</p>
+                            <p id="andar" runat="server"></p>
                         </span>
 
                         <span>
                             <strong>N° Quarto</strong>
-                            <p>20</p>
+                            <p id="numero_quarto" runat="server"></p>
                         </span>
 
                         <span>
                             <strong>Check In</strong>
-                            <p>00/00/0000</p>
+                            <p id="checkIn" runat="server"></p>
                         </span>
 
                         <span>
                             <strong>Check Out</strong>
-                            <p>00/00/0000</p>
+                            <p id="checkOut" runat="server"></p>
                         </span>
                     </div>
                 </div>
@@ -105,7 +99,7 @@
                     </span>
                 </div>
 
-                <a href="#"><button type="button" id="download" onclick="gerarPDF();">Finalizar</button></a>
+                <button type="button" id="download" onclick="gerarPDF();">Finalizar</button>
             </section>
         </main>
 

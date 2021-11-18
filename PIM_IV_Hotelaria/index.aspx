@@ -26,7 +26,7 @@
             <div class="slogan">
                 <div>
                     <h1>Hotel Imperador, o lugar mais confortável depois da sua casa</h1>
-                    <a href="reserva.aspx"><button type="button">Reservar Agora</button></a>
+                    <a href="reservas.aspx"><button type="button">Reservar Agora</button></a>
                 </div>
                 
                 <div>

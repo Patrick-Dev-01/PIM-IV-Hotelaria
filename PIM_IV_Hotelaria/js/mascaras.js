@@ -1,7 +1,7 @@
 ﻿function mascara(campo, value) {
     let campoValor = document.getElementById(campo);
 
-    if (campo === 'cpf') {
+    if (campo === 'name_cpf') {
         campoValor.value = value
             .replace(/\D/g, "")
             .replace(/(\d{3})(\d)/, "$1.$2")
@@ -10,7 +10,7 @@
             .replace(/(-\d{2})\d+?$/, "$1");
     }
 
-    if (campo === 'celular') {
+    if (campo === 'name_celular') {
         campoValor.value = value
             .replace(/\D/g, "")
             .replace(/(\d{2})(\d)/, "($1) $2")

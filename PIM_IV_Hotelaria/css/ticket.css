@@ -1,16 +1,4 @@
-﻿@media print {
-    body *:not(#GFG):not(#GFG *){
-        visibility: hidden;
-    }
-
-     {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
-
-main {
+﻿main {
     margin-bottom: 100px;
 }
 
@@ -52,13 +40,14 @@ main section {
 .logo {
     width: 100%;
     display: flex;
+    flex-direction: column;
     padding: 0 30px;
     align-items: center;
 }
 
 .logo h1 {
     color: #000;
-    margin: 0 40px;
+    margin: 20px 0 0 0;
 }
 
 .reserva {
