@@ -29,30 +29,33 @@
             </div>
 
             <section>
+                <asp:Label class="server" ID="msg_server" runat="server" Text=""></asp:Label>
+                <asp:Label class="server_erro" ID="msg_server_erro" runat="server" Text=""></asp:Label>
+
                 <form id="form1" runat="server" method="post">
                     <img src="./img/logo-footer.svg" alt="Hotel Imperador" />
 
                     <label>
                         CPF
                         <span>
-                            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" value="" oninput="mascara(`cpf`, `${event.target.value}`);"/>
-                            <p id="msg-erro-cpf"></p>
+                            <input type="text" name="cpf" runat="server" id="name_cpf" placeholder="000.000.000-00" value="" oninput="mascara(`name_cpf`, `${event.target.value}`);"/>
+                            <p id="msg_erro_cpf" runat="server" style="color: red;"></p>
                         </span>
                     </label>
 
                     <label>
                         Protocolo
                         <span>
-                            <input type="number" name="protocolo" id="protocolo" />
-                            <p id="msg-erro-nome"></p>
+                            <input type="number" runat="server" name="protocolo" id="name_protocolo" />
+                            <p id="msg_erro_protocolo" runat="server" style="color: red;"></p>
                         </span>
                     </label>
 
-                    <a href="cancelamento.html"><button type="button" onclick="Enviar();">Confirmar</button></a>
+                    <asp:Button class="btn_cancelar" type="button" runat="server" onclick="Cancelar_Click" Text="Cancelar Reserva"></asp:Button>
                 </form>
-
-                <p>A ação é irreversível, tenha certeza de sua escolha. Qualquer dúvida ligue na nossa unidade no número (00) 0000 - 0000 ou nos contate por E-mail faleconosco@HotelImperador.com.</p>
             </section>
+
+            <p class="aviso">A ação é irreversível, tenha certeza de sua escolha. Qualquer dúvida ligue na nossa unidade no número (00) 0000 - 0000 ou nos contate por E-mail faleconosco@HotelImperador.com.</p>
         </main>
 
     <footer>

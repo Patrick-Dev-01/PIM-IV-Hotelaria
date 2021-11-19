@@ -28,7 +28,6 @@ namespace PIM_IV_Hotelaria
                 protocolo.InnerText = Session["protocolo"].ToString();
                 diaria.InnerText = Session["diaria"].ToString();
             }
-            
         }
     }
 }

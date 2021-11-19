@@ -10,7 +10,6 @@ namespace PIM_IV_Hotelaria.utils
 
     public class Utils
     {
-
         public string RemoverMascara(String campo) {
             return campo.Replace(" ", "").Replace(".", "").Replace("-", "").Replace("(", "").Replace(")", "").Trim(); ;
         }

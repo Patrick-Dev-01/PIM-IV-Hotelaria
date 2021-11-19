@@ -15,6 +15,15 @@ namespace PIM_IV_Hotelaria
     {
 
         /// <summary>
+        /// Controle server_msg.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label server_msg;
+
+        /// <summary>
         /// Controle form1.
         /// </summary>
         /// <remarks>

@@ -30,12 +30,14 @@
             </div>
 
             <section>
+                <asp:Label ID="server_msg" runat="server" Text="" class="msg_servidor"></asp:Label>
+
                 <form method="post" id="form1" runat="server">
                     <label>
                         CPF
                         <span>
                             <input type="text" runat="server" id="name_cpf" placeholder="000.000.000-00" oninput="mascara(`name_cpf`, `${event.target.value}`);" value=""/>
-                            <p runat="server" id="msg_erro_cpf"></p>
+                            <p runat="server" id="msg_erro_cpf" style="color: red;"></p>
                         </span>
                     </label>
 
@@ -43,7 +45,7 @@
                         Nome
                         <span>
                             <input type="text" runat="server" name="nome" id="name_nome" value=""/>
-                            <p runat="server" id="msg_erro_nome"></p>
+                            <p runat="server" id="msg_erro_nome" style="color: red;"></p>
                         </span>
                     </label>
 

@@ -99,7 +99,7 @@
                     </span>
                 </div>
 
-                <button type="button" id="download" onclick="gerarPDF();">Finalizar</button>
+                <button class="btn-finalizar" type="button" runat="server" onclick="gerarPDF();">Baixar Ticket</button>
             </section>
         </main>
 

@@ -86,12 +86,64 @@ namespace PIM_IV_Hotelaria.classes
                 conexao.Desconectar();
 
                 AtualizarStatus(nQuarto, "ocupado");
-
             }
 
             catch(SqlException e)
             {
                 Debug.WriteLine("reserva: " + e);
+            }
+        }
+
+        public void CancelarReserva(string cpf, string protocolo) {
+            SqlCommand query_2 = new SqlCommand();
+            int numero_quarto = 0;
+
+            query.CommandText = "SELECT nQuarto FROM Reservas WHERE cpf = @cpf;";
+            query.Parameters.AddWithValue("@cpf", utils.RemoverMascara(cpf));
+            
+            try
+            {
+                query.Connection = conexao.Conectar();
+                query.ExecuteNonQuery();
+                // Ler os resultados da query
+                SqlDataAdapter quarto = new SqlDataAdapter(query);
+                DataTable quarto_resultado = new DataTable();
+
+                quarto.Fill(quarto_resultado);
+
+                foreach (DataRow quarto_lista in quarto_resultado.Rows)
+                {
+                    foreach (int item in quarto_lista.ItemArray)
+                    {
+                        numero_quarto = item;
+                    }
+                }
+
+                conexao.Desconectar();
+            }
+
+            catch (SqlException e)
+            {
+                Debug.WriteLine("reserva: " + e);
+            }
+
+            query_2.CommandText = "DELETE FROM Reservas WHERE cpf = @cpf AND protocolo = @protocolo";
+            query_2.Parameters.AddWithValue("@cpf", utils.RemoverMascara(cpf));
+            query_2.Parameters.AddWithValue("@protocolo", protocolo);
+
+            try
+            {
+                query_2.Connection = conexao.Conectar();
+                query_2.ExecuteNonQuery();
+
+                conexao.Desconectar();
+
+                AtualizarStatus(numero_quarto, "disponivel");
+            }
+
+            catch (SqlException e)
+            {
+                Debug.WriteLine("status: " + e);
             }
         }
     }

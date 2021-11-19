@@ -127,46 +127,61 @@ namespace PIM_IV_Hotelaria
             }
 
             if (erros == 0) {
-                
 
                 var quartosDisponiveis = reserva.QuartosDisponiveis(tipo_quarto);
-                int[] quartos = new int[quartosDisponiveis.Rows.Count];
-                int indice = 0;
 
-                foreach (DataRow quartoDisponivel in quartosDisponiveis.Rows)
+                if (quartosDisponiveis.Rows.Count == 0)
                 {
-                    foreach (int item in quartoDisponivel.ItemArray)
+                    server_msg.Text = "Infelizmente Todos os Quartos para " + utils.DescricaoQuarto(tipo_quarto) + " já foram ocupados ou não estão disponíveis";
+                }
+
+                else {
+
+                    int[] quartos = new int[quartosDisponiveis.Rows.Count];
+                    int indice = 0;
+
+                    foreach (DataRow quartoDisponivel in quartosDisponiveis.Rows)
                     {
-                        quartos[indice] = item;
-                        indice++;
+                        foreach (int item in quartoDisponivel.ItemArray)
+                        {
+                            quartos[indice] = item;
+                            indice++;
+                        }
                     }
+
+                    Random randQuarto = new Random();
+                    Random randProtocolo = new Random();
+
+                    int numero_quarto = quartos[randQuarto.Next(quartos.Length)];
+                    string protocolo = "";
+
+                    for (int i = 1; i <= 10; i++)
+                    {
+                        protocolo = randProtocolo.Next().ToString();
+                    }
+
+                    try
+                    {
+                        reserva.cadastrarReserva(cpf, nome, email, celular, numero_quarto, pagamento, checkIn, checkOut, protocolo);
+
+                        Session["nome"] = nome;
+                        Session["email"] = email;
+                        Session["celular"] = celular;
+                        Session["numero_quarto"] = numero_quarto;
+                        Session["descricao_quarto"] = utils.DescricaoQuarto(tipo_quarto);
+                        Session["andar"] = utils.quartoAndar(numero_quarto);
+                        Session["checkIn"] = checkIn;
+                        Session["checkOut"] = checkOut;
+                        Session["diaria"] = utils.ValorDiaria(tipo_quarto);
+                        Session["protocolo"] = protocolo;
+                        Session["concluiuReserva"] = "true";
+                        Response.Redirect("ticket.aspx");
+                    }
+
+                    catch {
+                        server_msg.Text = "Infelizmente não foi possível concluir a sua Reserva Tente Novamente mais Tarde";   
+                    }      
                 }
-
-                Random randQuarto = new Random();
-                Random randProtocolo = new Random();
-
-                int numero_quarto = quartos[randQuarto.Next(quartos.Length)];
-                string protocolo = "";
-
-                for (int i = 1; i <= 10; i++)
-                {
-                    protocolo = randProtocolo.Next().ToString();
-                }
-
-                reserva.cadastrarReserva(cpf, nome, email, celular, numero_quarto, pagamento, checkIn, checkOut, protocolo);
-
-                Session["nome"] = nome;
-                Session["email"] = email;
-                Session["celular"] = celular;
-                Session["numero_quarto"] = numero_quarto;
-                Session["descricao_quarto"] = utils.DescricaoQuarto(tipo_quarto);
-                Session["andar"] = utils.quartoAndar(numero_quarto);
-                Session["checkIn"] = checkIn;
-                Session["checkOut"] = checkOut;
-                Session["diaria"] = utils.ValorDiaria(tipo_quarto);
-                Session["protocolo"] = protocolo;
-                Session["concluiuReserva"] = "true";
-                Response.Redirect("ticket.aspx");
             }
         }
     }

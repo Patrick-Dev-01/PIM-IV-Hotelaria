@@ -79,7 +79,7 @@ main section {
         margin-bottom: 5px;
     }
 
-button {
+.btn-finalizar {
     width: 150px;
     height: 50px;
     background: #9157EE; 
@@ -90,7 +90,7 @@ button {
     color: #fff;
 }
 
-    button:hover {
+    .btn-finalizar:hover {
         background: #6A43A9;
         transition: 0.2s;
     }
