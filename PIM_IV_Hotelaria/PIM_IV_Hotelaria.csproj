@@ -179,6 +179,7 @@
     <Content Include="img\solteiro-icon.svg" />
     <Content Include="img\twitter.svg" />
     <Content Include="index.aspx" />
+    <Content Include="js\diaria.js" />
     <Content Include="js\mascaras.js" />
     <Content Include="js\ticket.js" />
     <Content Include="reservas.aspx" />

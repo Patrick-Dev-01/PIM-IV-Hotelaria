@@ -85,10 +85,10 @@
 
                 <div class="avisos">
                     <span>
-                        <strong>Seu número de protocolo:</strong><p> 1564889489450894</p>
+                        <strong>Seu número de protocolo:</strong><p runat="server" id="protocolo"></p>
                     </span>
                     <span>
-                        <strong>Valor da diária:</strong><p> R$ 300,00</p>
+                        <strong>Valor da diária:</strong><p runat="server" id="diaria" ></p>
                     </span>
                     <span>
                         <strong>Importante! </strong><br/>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <title>Hotelaria Imperador - Reserva</title>
     <script src="./js/mascaras.js"></script>
+    <script src="./js/diaria.js"></script>
 </head>
 <body>
      <div class="container">
@@ -63,12 +64,11 @@
                     </label>
 
                     <div class="quartos">
-                        <select runat="server" id="name_quarto" name="quarto" onchange="adicionarOpcoes(`${event.target.value}`);">
+                        <select runat="server" id="name_quarto" name="quarto" onchange="diaria(`${event.target.value}`);">
                             <option value="">Quarto</option>
                             <option value="1">Solteiro - 1 Cama de Solteiro</option>
                             <option value="2">Solteiro - 2 Camas de Solteiro</option>
                             <option value="3">Solteiro - 3 Camas de Solteiro</option>
-
                             <option value="4">Casal - 1 Cama de Casal</option>
                             <option value="5">Casal - 2 Camas de Casal</option>
                             <option value="6">Casal e Filhos - 1 Cama de Casal e 1 Cama de Solteiro</option>
@@ -87,7 +87,7 @@
                             </select>
 
                             <span>
-                                <input type="number" name="diaria" runat="server" placeholder="R$ 0,00" disabled="disabled" style="cursor: not-allowed"/> 
+                                <input type="number" id="name_diaria" runat="server" placeholder="R$ 0,00" disabled="disabled" value="" style="cursor: not-allowed"/> 
                             </span>
                          </div>
                         <p runat="server" id="msg_erro_pagamento" style="color: red"></p>                        

@@ -13,9 +13,16 @@ namespace PIM_IV_Hotelaria
     public partial class Index : System.Web.UI.Page
     {
         Reserva reserva = new Reserva();
+        Random randCaracteres = new Random();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["concluiuReserva"] = "false";
+            string teste = "";
+
+           
+
+            Debug.WriteLine(teste);
         }
     }
 }

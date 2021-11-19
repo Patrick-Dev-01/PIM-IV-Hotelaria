@@ -123,6 +123,15 @@ namespace PIM_IV_Hotelaria
         protected global::System.Web.UI.HtmlControls.HtmlSelect name_pagamento;
 
         /// <summary>
+        /// Controle name_diaria.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl name_diaria;
+
+        /// <summary>
         /// Controle msg_erro_pagamento.
         /// </summary>
         /// <remarks>
