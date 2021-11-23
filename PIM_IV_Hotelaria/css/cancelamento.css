@@ -83,3 +83,13 @@ form select {
         background: #6A43A9;
         transition: 0.2s;
     }
+
+/* mobile */
+
+@media(max-width: 530px) {
+    .aviso {
+        width: fit-content;
+        text-align: left;
+        margin-left: 10px;
+    }
+}

@@ -161,6 +161,7 @@
     <Content Include="css\reserva.css" />
     <Content Include="css\styles.css" />
     <Content Include="css\ticket.css" />
+    <Content Include="img\burger_menu.svg" />
     <Content Include="img\casais_filhos-icon.svg" />
     <Content Include="img\casal-icon.svg" />
     <Content Include="img\facebook.svg" />
@@ -169,6 +170,7 @@
     <Content Include="img\logo-footer.svg" />
     <Content Include="img\logo-header.svg" />
     <Content Include="img\logo.svg" />
+    <Content Include="img\logo_mobile.svg" />
     <Content Include="img\quartos\casais_filhos_1.jpg" />
     <Content Include="img\quartos\casais_filhos_2.jpg" />
     <Content Include="img\quartos\casal_1.jpg" />
@@ -181,6 +183,7 @@
     <Content Include="index.aspx" />
     <Content Include="js\diaria.js" />
     <Content Include="js\mascaras.js" />
+    <Content Include="js\menu_mobile.js" />
     <Content Include="js\ticket.js" />
     <Content Include="reservas.aspx" />
     <Content Include="ticket.aspx" />

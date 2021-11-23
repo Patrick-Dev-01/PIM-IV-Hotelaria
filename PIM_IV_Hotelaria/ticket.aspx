@@ -10,19 +10,36 @@
     <link rel="stylesheet" type="text/css" href="./css/ticket.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="./js/menu_mobile.js"></script>
     <script src="./js/ticket.js"></script>
     <title>Hotelaria Imperador - Ticket</title>
 </head>
 <body>
      <div class="container">
-        <header>
-            <a href="index.aspx"><img src="./img/logo.svg" alt="Hotelaria Imperador" /></a>
+         <header class="cabecalho">
+           <a href="index.aspx"><img src="./img/logo.svg" alt="Hotelaria Imperador" /></a>
             <ul>
-                <li><a href="index.aspx">Página Inicial</a></li>
-                <li><a href="#">Minha Reserva</a></li>
+                <li><a href="index.aspx">Home</a></li>
+                <li><a href="reservas.aspx">Reservar</a></li>
                 <li><a href="cancelamento.aspx">Cancelamento</a></li>
             </ul>
         </header>
+
+        <header class="cabecalho_mobile">
+           <a href="index.aspx"><img src="./img/logo_mobile.svg" alt="Hotelaria Imperador" /></a>
+            <div class="burger_menu">
+                <img src="./img/burger_menu.svg" alt="Menu" onclick="showMenu();"/>
+                <nav id="menu" onclick="showMenu();">
+                    <strong>X</strong>
+                    <ul>
+                        <li><a href="index.aspx">Home</a></li>
+                        <li><a href="reservas.aspx">Reservar</a></li>
+                        <li><a href="cancelamento.aspx">Cancelamento</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
 
         <main>
             <div class="titulo">
@@ -129,9 +146,9 @@
                     <h2>Redes Sociais</h2>
 
                     <div class="redes">
-                        <a href=""><img src="./img/instragram.svg" /></a>
-                        <a href=""><img src="./img/facebook.svg" /></a>
-                        <a href=""><img src="./img/twitter.svg" /></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="./img/instragram.svg" /></a>
+                        <a href="https://www.facebook.com/"><img src="./img/facebook.svg" /></a>
+                        <a href="https://twitter.com/"><img src="./img/twitter.svg" /></a>
                     </div>
                 </div>
             </section>

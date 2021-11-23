@@ -10,16 +10,32 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <title>Hotelaria Imperador</title>
+    <script src="./js/menu_mobile.js"></script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="cabecalho">
            <a href="index.aspx"><img src="./img/logo.svg" alt="Hotelaria Imperador" /></a>
             <ul>
-                <li><a href="index.aspx">Página Inicial</a></li>
-                <li><a href="#">Minha Reserva</a></li>
+                <li><a href="index.aspx">Home</a></li>
+                <li><a href="reservas.aspx">Reservar</a></li>
                 <li><a href="cancelamento.aspx">Cancelamento</a></li>
             </ul>
+        </header>
+
+        <header class="cabecalho_mobile">
+           <a href="index.aspx"><img src="./img/logo_mobile.svg" alt="Hotelaria Imperador" /></a>
+            <div class="burger_menu">
+                <img src="./img/burger_menu.svg" alt="Menu" onclick="showMenu();"/>
+                <nav id="menu" onclick="showMenu();">
+                    <strong>X</strong>
+                    <ul>
+                        <li><a href="index.aspx">Home</a></li>
+                        <li><a href="reservas.aspx">Reservar</a></li>
+                        <li><a href="cancelamento.aspx">Cancelamento</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
@@ -50,29 +66,29 @@
                             <p>Quarto solteiro Individual.</p>
                             <span>
                                 <h3>1 Cama de solteiro</h3>
-                                <p>Diária: <strong>R$ 200,00</strong></p>
+                                <p>Diária: <strong>R$ 100,00</strong></p>
                             </span>
-                            <button type="button">Reservar</button>
+                            <a href="reservas.aspx"> <button type="button">Reservar</button></a>
                         </div>
                         
                         <div class="quarto">
                             <img src="./img/quartos/solteiro_2.jpg" alt="" />
-                            <p>Quarto solteiro Individual.</p>
+                            <p>Quarto para duas 2 pessoas.</p>
                             <span>
                                 <h3>2 Camas de solteiro</h3>
-                                <p>Diária: <strong>R$ 300,00</strong></p>
+                                <p>Diária: <strong>R$ 150,00</strong></p>
                             </span>
-                            <button type="button">Reservar</button>
+                             <a href="reservas.aspx"><button type="button">Reservar</button></a>
                         </div>
 
                         <div class="quarto">
                             <img src="./img/quartos/solteiro_3.jpg" alt="" />
-                            <p>Quarto solteiro Individual.</p>
+                            <p>Quarto para duas 3 pessoas.</p>
                             <span>
                                 <h3>3 Camas de solteiro</h3>
-                                <p>Diária: <strong>R$ 300,00</strong></p>
+                                <p>Diária: <strong>R$ 200,00</strong></p>
                             </span>
-                            <button type="button">Reservar</button>
+                            <a href="reservas.aspx"><button type="button">Reservar</button></a>
                         </div>
                     </div>
                 </div>
@@ -87,9 +103,9 @@
                             <p>Quarto para casal.</p>
                             <span>
                                 <h3>1 Cama de casal</h3>
-                                <p>Diária: <strong>R$ 200,00</strong></p>
+                                <p>Diária: <strong>R$ 250,00</strong></p>
                             </span>
-                            <button type="button">Reservar</button>
+                             <a href="reservas.aspx"><button type="button">Reservar</button></a>
                         </div>
 
                         <div class="quarto">
@@ -97,9 +113,9 @@
                             <p>Quarto para 2 casais (sem filhos).</p>
                             <span>
                                 <h3>2 Camas de Casal</h3>
-                                <p>Diária: <strong>R$ 200,00</strong></p>
+                                <p>Diária: <strong>R$ 350,00</strong></p>
                             </span>
-                            <button type="button">Reservar</button>
+                             <a href="reservas.aspx"><button type="button">Reservar</button></a>
                         </div>
                     </div>
                 </div>
@@ -111,22 +127,22 @@
                     <div class="quartos">
                         <div class="quarto">
                             <img src="./img/quartos/casais_filhos_1.jpg" alt="" />
-                            <p>Quarto para casal.</p>
+                            <p>Quarto para casal com filhos.</p>
                             <span>
-                                <h3>1 Cama de casal</h3>
-                                <p>Diária: <strong>R$ 200,00</strong></p>
+                                <h3>1 Cama de casal e 1 Cama de Solteiro</h3>
+                                <p>Diária: <strong>R$ 400,00</strong></p>
                             </span>
-                            <button type="button">Reservar</button>
+                             <a href="reservas.aspx"><button type="button">Reservar</button></a>
                         </div>
 
                         <div class="quarto">
                             <img src="./img/quartos/casais_filhos_2.jpg" alt="" />
-                            <p>Quarto para casal.</p>
+                            <p>Quarto para casal com filhos</p>
                             <span>
-                                <h3>1 Cama de casal</h3>
-                                <p>Diária: <strong>R$ 200,00</strong></p>
+                                <h3>1 Cama de casal e 2 Camas de Solteiro</h3>
+                                <p>Diária: <strong>R$ 520,00</strong></p>
                             </span>
-                            <button type="button">Reservar</button>
+                             <a href="reservas.aspx"><button type="button">Reservar</button></a>
                         </div> 
                     </div>
                 </div>
@@ -159,9 +175,9 @@
                     <h2>Redes Sociais</h2>
 
                     <div class="redes">
-                        <a href=""><img src="./img/instragram.svg" /></a>
-                        <a href=""><img src="./img/facebook.svg" /></a>
-                        <a href=""><img src="./img/twitter.svg" /></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="./img/instragram.svg" /></a>
+                        <a href="https://www.facebook.com/"><img src="./img/facebook.svg" /></a>
+                        <a href="https://twitter.com/"><img src="./img/twitter.svg" /></a>
                     </div>
                 </div>
             </section>

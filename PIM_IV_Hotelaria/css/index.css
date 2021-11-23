@@ -24,7 +24,6 @@ main {
     .slogan:nth-child(1) img {
         width: 500px;
         height: 400px;
-        background: red;
     }
 
     .slogan button {
@@ -107,6 +106,9 @@ section{
     flex-direction: column;
     align-items: center;
 }
+    .quarto p {
+        font-size: 18px;
+    }
 
     .quarto span {
         width: 100%;
@@ -134,17 +136,6 @@ section{
         background: #6A43A9;
         transition: 0.2s;
     }
-
-footer section{
-    background: #9157EE;
-    width: 100%;
-    height: 200px;
-    margin-top: 340px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 15px 30px;
-}
 
 
 .historia h2, .contato h2, .redes-sociais h2 {
@@ -202,4 +193,69 @@ footer section{
     text-align: center;
     color: #fff;
     padding: 30px 0 0 0;
+}
+
+@media (max-width: 1350px) {
+    .quartos {
+        width: 60%;
+        flex-direction: column;
+    }
+
+    .tipo-quarto {
+        height: fit-content;
+    }
+
+    .quarto {
+        height: fit-content;
+    }
+
+        .quarto img {
+            width: 100%;
+        }
+}
+
+/* Tablet */
+
+@media (max-width: 980px) {
+    .slogan {
+        flex-direction: column;
+    }
+
+    .slogan:nth-child(1) img {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 40px; 
+    }
+
+    .descricao h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .descricao p {
+        min-width: 300px;
+    }
+
+    .quartos {
+        width: 100%;
+    }
+
+    .quarto span {
+        padding: 20px 20px;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 745px) {
+    .slogan:nth-child(1) img {
+        width: 400px;
+        height: 400px;
+        margin-top: 40px;
+    }
+
+    footer section {
+        flex-direction: column;
+        height: unset;
+    }
 }
